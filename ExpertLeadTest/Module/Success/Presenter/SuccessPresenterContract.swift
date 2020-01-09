@@ -1,7 +1,6 @@
 import Foundation
 
 protocol SuccessPresenterContract: class {
-    
-    func viewDidLoad()
-    func viewWillAppear()
+  func viewDidLoad()
+  func viewWillAppear()
 }
