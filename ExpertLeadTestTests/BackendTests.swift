@@ -5,11 +5,11 @@ import ExpertLeadTest
 
 class BackendTests: XCTestCase {
 
-  var backend: Backend!
+  var backend: TinyNetworkingAPIGateway!
 
   override func setUp() {
     let baseURL = URL(string: "https://42.com")!
-    backend = Backend(baseURL: baseURL)
+    backend = TinyNetworkingAPIGateway(baseURL: baseURL)
   }
 
   override func tearDown() {
@@ -24,7 +24,7 @@ class BackendTests: XCTestCase {
 
   func testMakingAnEndpointToAuthenticateAUser() {
 
-    let user = User(email: "42@42.com", password: "FortyTwo:42")
+    let user = Credentials(email: "42@42.com", password: "FortyTwo:42")
     let endpoint = backend.makeEndpointToAuthenticate(user: user)
 
     let expectedEndpointDescription = "POST https://42.com/test/authenticate {\"email\":\"42@42.com\",\"password\":\"FortyTwo:42\"}"
