@@ -5,13 +5,13 @@ class TinyNetworkingAPIGateway: APIGatewayContract {
 
   // MARK: - Private properties
 
-  private let baseURL: URL
   private let urlSession: URLSession
+  private let urlFactory: GatewayURLFactoryContract
 
   // MARK: - Life cycle
 
-  init(baseURL: URL, urlSession: URLSession = URLSession.shared) {
-    self.baseURL = baseURL
+  init(urlFactory: GatewayURLFactoryContract, urlSession: URLSession = URLSession.shared) {
+    self.urlFactory = urlFactory
     self.urlSession = urlSession
   }
 
@@ -40,18 +40,6 @@ class TinyNetworkingAPIGateway: APIGatewayContract {
       }
     }
   }
-
-  // TODO: Move these the the URL factory/builder
-  // MARK: - URL path components
-
-  enum PathComponent: String {
-    case authenticate
-    case test
-  }
-
-  func makeBaseUrlWithTestPathComponent() -> URL {
-    baseURL.appendingPathComponent(TinyNetworkingAPIGateway.PathComponent.test.rawValue)
-  }
 }
 
 // MARK: Authentication helpers
@@ -69,21 +57,14 @@ private extension TinyNetworkingAPIGateway {
     return code >= 200 && code < 300 || code == 401 || code == 500
   }
 
-  // TODO: Move to an endpoint factory
   func makeEndpointToAuthenticate(user: Credentials) -> Endpoint<TinyNetworkingAPIGateway.AuthenticationResponse> {
 
-    let url = makeAuthenticateURL()
+    let url = urlFactory.makeAuthenticateURL()
     let endpoint = Endpoint<AuthenticationResponse>(json: .post,
                                                     url: url,
                                                     body: user,
                                                     expectedStatusCode: expectedTestCode(_:))
 
     return endpoint
-  }
-
-  // TODO: Move this the the URL factory/builder
-  func makeAuthenticateURL() -> URL {
-    let baseURL = makeBaseUrlWithTestPathComponent()
-    return baseURL.appendingPathComponent(TinyNetworkingAPIGateway.PathComponent.authenticate.rawValue)
   }
 }
