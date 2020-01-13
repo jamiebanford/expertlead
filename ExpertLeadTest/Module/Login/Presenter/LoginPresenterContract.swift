@@ -1,7 +1,7 @@
 import Foundation
 
 protocol LoginPresenterContract: class {
-  var interactor: LoginInteractorContract { get }
+  var useCase: LoginUseCaseContract { get }
 
   func viewDidLoad()
   func viewWillAppear()

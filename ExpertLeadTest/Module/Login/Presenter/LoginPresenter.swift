@@ -7,14 +7,14 @@ class LoginPresenter {
   weak var view: LoginViewContract!
   var router: RouterContract
 
-  let interactor: LoginInteractorContract
+  let useCase: LoginUseCaseContract
   
   // MARK: - Initialisers
   
-  init(view: LoginViewContract, router: RouterContract, interactor: LoginInteractorContract) {
+  init(view: LoginViewContract, router: RouterContract, useCase: LoginUseCaseContract) {
     self.view = view
     self.router = router
-    self.interactor = interactor
+    self.useCase = useCase
   }
 }
 
@@ -24,7 +24,7 @@ extension LoginPresenter: LoginPresenterContract {
   func viewDidLoad() {
     // Test the /authenticate endpoint
     let user = Credentials(email: "user@test.com", password: "This1sATest!")
-    interactor.authenticate(user: user, onSuccess: { authenticatedUser in
+    useCase.authenticate(user: user, onSuccess: { authenticatedUser in
       print(authenticatedUser)
     }) { displayableError in
       print(displayableError)

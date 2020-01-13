@@ -27,8 +27,8 @@ extension Router: RouterContract {
 
   func presentLogin() {
     let view = mainStoryboard.instantiateInitialViewController() as! LoginViewController
-    let interactor = LoginInteractor(apiGateway: apiGateway)
-    let presenter = LoginPresenter(view: view, router: self, interactor: interactor)
+    let useCase = LoginUseCase(apiGateway: apiGateway)
+    let presenter = LoginPresenter(view: view, router: self, useCase: useCase)
     view.presenter = presenter
 
     window?.rootViewController = view

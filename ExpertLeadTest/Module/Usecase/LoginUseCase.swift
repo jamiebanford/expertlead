@@ -1,6 +1,6 @@
 import Foundation
 
-class LoginInteractor: LoginInteractorContract {
+class LoginUseCase: LoginUseCaseContract {
 
   let apiGateway: APIGatewayContract
 

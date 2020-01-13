@@ -1,6 +1,6 @@
 import Foundation
 
-protocol LoginInteractorContract: class {
+protocol LoginUseCaseContract: class {
 
   var apiGateway: APIGatewayContract { get }
 
