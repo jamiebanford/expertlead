@@ -123,13 +123,49 @@
 			path = GatewayURLFactory;
 			sourceTree = "<group>";
 		};
-		16D5A0B223C8C36300B64A29 /* Usecase */ = {
+		16BD33D923CCEAFC00C8B8FA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				AA147714212AF4EB00214093 /* Router.swift */,
+				AA147713212AF36B00214093 /* Storyboard */,
+				16BD33DB23CCEB6500C8B8FA /* Scene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		16BD33DA23CCEB1900C8B8FA /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				16DD0D5F23C8CC4E004608B6 /* Entity */,
+				16D5A0B223C8C36300B64A29 /* UseCase */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		16BD33DB23CCEB6500C8B8FA /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				AA147700212AEF5D00214093 /* Login */,
+				AA1476FF212AEF5000214093 /* Success */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		16BD33DC23CCEBA400C8B8FA /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				16D5A0B323C8C39500B64A29 /* LoginUseCaseContract.swift */,
 				16D5A0B723C8C48D00B64A29 /* LoginUseCase.swift */,
 			);
-			path = Usecase;
+			path = Login;
+			sourceTree = "<group>";
+		};
+		16D5A0B223C8C36300B64A29 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				16BD33DC23CCEBA400C8B8FA /* Login */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		16D727F123C7516300684881 /* APIGateway */ = {
@@ -192,9 +228,7 @@
 		AA1476E9212AEF1700214093 /* ExpertLeadTest */ = {
 			isa = PBXGroup;
 			children = (
-				16D727F123C7516300684881 /* APIGateway */,
 				AA1476FD212AEF3500214093 /* Module */,
-				AA147713212AF36B00214093 /* Storyboard */,
 				AA1476FC212AEF2300214093 /* Other */,
 				AA1476F6212AEF1800214093 /* Info.plist */,
 			);
@@ -214,11 +248,9 @@
 		AA1476FD212AEF3500214093 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				AA147714212AF4EB00214093 /* Router.swift */,
-				16DD0D5F23C8CC4E004608B6 /* Entity */,
-				16D5A0B223C8C36300B64A29 /* Usecase */,
-				AA147700212AEF5D00214093 /* Login */,
-				AA1476FF212AEF5000214093 /* Success */,
+				16BD33D923CCEAFC00C8B8FA /* Presentation */,
+				16BD33DA23CCEB1900C8B8FA /* Logic */,
+				16D727F123C7516300684881 /* APIGateway */,
 			);
 			path = Module;
 			sourceTree = "<group>";
