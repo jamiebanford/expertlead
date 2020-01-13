@@ -52,18 +52,15 @@ private extension TinyNetworkingAPIGateway {
     let message: String
   }
 
-  /// Returns `true` if `code` is in the 200..<300 range, or the code is 401 or 500.
-  func expectedTestCode(_ code: Int) -> Bool {
-    return code >= 200 && code < 300 || code == 401 || code == 500
-  }
-
   func makeEndpointToAuthenticate(user: Credentials) -> Endpoint<TinyNetworkingAPIGateway.AuthenticationResponse> {
 
     let url = urlFactory.makeAuthenticateURL()
     let endpoint = Endpoint<AuthenticationResponse>(json: .post,
                                                     url: url,
                                                     body: user,
-                                                    expectedStatusCode: expectedTestCode(_:))
+                                                    expectedStatusCode: { code in
+                                                      return code == 200 || code == 401 || code == 500
+    })
 
     return endpoint
   }
