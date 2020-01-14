@@ -8,7 +8,7 @@ class LoginViewController: UIViewController, LoginViewContract {
   @IBOutlet weak var passwordField: UITextField!
   @IBOutlet weak var loginButton: UIButton!
   @IBOutlet weak var activityIndicatory: UIActivityIndicatorView!
-  @IBOutlet weak var errorMessage: UILabel!
+  @IBOutlet weak var errorMessageLabel: UILabel!
 
   var presenter: LoginPresenterContract!
 
@@ -49,6 +49,16 @@ class LoginViewController: UIViewController, LoginViewContract {
   func hideActivityIndicator() {
     DispatchQueue.main.async { [weak self] in
       self?.activityIndicatory.stopAnimating()
+    }
+  }
+
+  func clearErrorMessage() {
+    errorMessageLabel.text = nil
+  }
+
+  func update(errorMessage newErrorMessage: String) {
+    DispatchQueue.main.async { [weak self] in
+      self?.errorMessageLabel.text = newErrorMessage
     }
   }
 }

@@ -67,7 +67,7 @@
                     <connections>
                         <outlet property="activityIndicatory" destination="gTd-ap-D4e" id="FCS-ad-6Qb"/>
                         <outlet property="emailField" destination="2vU-SB-6hO" id="03a-Ze-ZDK"/>
-                        <outlet property="errorMessage" destination="rds-LN-fLL" id="1bT-IB-zId"/>
+                        <outlet property="errorMessageLabel" destination="rds-LN-fLL" id="1bT-IB-zId"/>
                         <outlet property="loginButton" destination="jsr-y5-uqN" id="Syj-Ny-qfH"/>
                         <outlet property="passwordField" destination="qnx-ro-hTJ" id="8RZ-Bk-2RP"/>
                     </connections>

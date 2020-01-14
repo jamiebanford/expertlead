@@ -8,5 +8,6 @@ protocol LoginViewContract: class {
   func showActivityIndicator()
   func hideActivityIndicator()
 
+  func clearErrorMessage()
   func update(errorMessage newErrorMessage: String)
 }

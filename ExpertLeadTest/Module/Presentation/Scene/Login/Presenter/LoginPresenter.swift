@@ -24,7 +24,7 @@ extension LoginPresenter: LoginPresenterContract {
   
   func viewDidLoad() {
 
-    // Set up the view
+    setUpErrorMessageLabel()
     setUpActivityIndicator()
     updateLoginButton()
   }
@@ -53,8 +53,8 @@ extension LoginPresenter: LoginPresenterContract {
       print(authenticatedUser)
       self.updateViewAfterLoginAttempt()
     }) { displayableError in
-      print(displayableError)
       self.updateViewAfterLoginAttempt()
+      self.display(errorMessage: displayableError.message)
     }
   }
 }
@@ -76,11 +76,16 @@ private extension LoginPresenter {
   func prepareViewForLoginAttempt() {
     view.showActivityIndicator()
     view.disableLoginButton()
+    view.clearErrorMessage()
   }
 
   func updateViewAfterLoginAttempt() {
     view.hideActivityIndicator()
     view.enableLoginButton()
+  }
+
+  func setUpErrorMessageLabel() {
+    view.clearErrorMessage()
   }
 
   func setUpActivityIndicator() {
@@ -95,5 +100,9 @@ private extension LoginPresenter {
     } else {
       view.disableLoginButton()
     }
+  }
+
+  func display(errorMessage: String) {
+    view.update(errorMessage: errorMessage)
   }
 }
