@@ -11,4 +11,5 @@ protocol LoginPresenterContract: class {
   // MARK: View actions
 
   func update(email newEmail: String)
+  func update(password newPassword: String)
 }

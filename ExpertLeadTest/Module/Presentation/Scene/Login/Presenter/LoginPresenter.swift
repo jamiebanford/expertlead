@@ -12,6 +12,7 @@ class LoginPresenter {
   // MARK: - Private properties
 
   var currentEmail: String?
+  var currentPassword: String?
   
   // MARK: - Initialisers
   
@@ -45,5 +46,9 @@ extension LoginPresenter: LoginPresenterContract {
 
   func update(email newEmail: String) {
     currentEmail = newEmail
+  }
+
+  func update(password newPassword: String) {
+    currentPassword = newPassword
   }
 }

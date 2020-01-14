@@ -52,7 +52,7 @@ extension LoginViewController: UITextFieldDelegate {
     }
 
     if textField == passwordField {
-      print("Editing password: \(string)")
+      presenter.update(password: currentText)
     }
 
     return true
