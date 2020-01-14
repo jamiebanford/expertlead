@@ -50,8 +50,8 @@ extension LoginPresenter: LoginPresenterContract {
     prepareViewForLoginAttempt()
 
     useCase.authenticate(onSuccess: { authenticatedUser in
-      print(authenticatedUser)
       self.updateViewAfterLoginAttempt()
+      self.didSuccessFullyAuthenticate(user: authenticatedUser)
     }) { displayableError in
       self.updateViewAfterLoginAttempt()
       self.display(errorMessage: displayableError.message)
@@ -104,5 +104,15 @@ private extension LoginPresenter {
 
   func display(errorMessage: String) {
     view.update(errorMessage: errorMessage)
+  }
+
+  func didSuccessFullyAuthenticate(user authenticatedUser: AuthenticatedUser) {
+    print(authenticatedUser)
+    // TODO: Do something with the authenticated user
+    // Saving the token is probably a good idea...
+
+    DispatchQueue.main.async { [weak self] in
+      self?.router.presentSuccess()
+    }
   }
 }
