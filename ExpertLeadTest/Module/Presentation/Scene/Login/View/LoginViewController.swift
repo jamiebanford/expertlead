@@ -2,7 +2,13 @@ import UIKit
 
 class LoginViewController: UIViewController, LoginViewContract {
 
-  // MARK: - Properties
+  // MARK: - IB Outlets
+
+  @IBOutlet weak var emailField: UITextField!
+  @IBOutlet weak var passwordField: UITextField!
+  @IBOutlet weak var loginButton: UIButton!
+  @IBOutlet weak var activityIndicatory: UIActivityIndicatorView!
+  @IBOutlet weak var errorMessage: UILabel!
 
   var presenter: LoginPresenterContract!
 
@@ -16,5 +22,11 @@ class LoginViewController: UIViewController, LoginViewContract {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     presenter.viewWillAppear()
+  }
+
+  // MARK: - IB Actions
+
+  @IBAction func buttonPressed(_ sender: Any) {
+      print("Login pressed!")
   }
 }

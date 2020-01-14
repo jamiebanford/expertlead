@@ -29,6 +29,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsr-y5-uqN">
                                 <rect key="frame" x="164.5" y="104" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="og2-ST-VD1"/>
+                                </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gTd-ap-D4e">
                                 <rect key="frame" x="177.5" y="142" width="20" height="20"/>
@@ -55,6 +58,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicatory" destination="gTd-ap-D4e" id="FCS-ad-6Qb"/>
+                        <outlet property="emailField" destination="2vU-SB-6hO" id="03a-Ze-ZDK"/>
+                        <outlet property="errorMessage" destination="rds-LN-fLL" id="1bT-IB-zId"/>
+                        <outlet property="loginButton" destination="jsr-y5-uqN" id="Syj-Ny-qfH"/>
+                        <outlet property="passwordField" destination="qnx-ro-hTJ" id="8RZ-Bk-2RP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bga-Do-5YV">
-                                <rect key="frame" x="155" y="323" width="64.5" height="21"/>
+                                <rect key="frame" x="155.5" y="323" width="64.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
