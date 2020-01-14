@@ -26,19 +26,24 @@ class Router {
 extension Router: RouterContract {
 
   func presentLogin() {
-    let view = mainStoryboard.instantiateInitialViewController() as! LoginViewController
+    guard
+      let navigationController = mainStoryboard.instantiateInitialViewController() as? UINavigationController,
+      let view = navigationController.viewControllers.first as? LoginViewController
+      else { return }
+
     let useCase = LoginUseCase(apiGateway: apiGateway)
     let presenter = LoginPresenter(view: view, router: self, useCase: useCase)
     view.presenter = presenter
 
-    window?.rootViewController = view
+    window?.rootViewController = navigationController
   }
 
   func presentSuccess() {
     let view = mainStoryboard.instantiateViewController(withIdentifier: "SuccessViewController") as! SuccessViewController
+
     let presenter = SuccessPresenter(view: view, router: self)
     view.presenter = presenter
 
-    window?.rootViewController?.present(view, animated: true)
+    window?.rootViewController?.show(view, sender: nil)
   }
 }
