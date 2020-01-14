@@ -30,3 +30,23 @@ class LoginViewController: UIViewController, LoginViewContract {
       print("Login pressed!")
   }
 }
+
+// MARK: - Text field delegate
+
+extension LoginViewController: UITextFieldDelegate {
+
+  func textField(_ textField: UITextField,
+                 shouldChangeCharactersIn range: NSRange,
+                 replacementString string: String) -> Bool {
+
+    if textField == emailField {
+      print("Editing email: \(string)")
+    }
+
+    if textField == passwordField {
+      print("Editing password: \(string)")
+    }
+
+    return true
+  }
+}
