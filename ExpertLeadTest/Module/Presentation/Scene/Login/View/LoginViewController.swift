@@ -39,8 +39,16 @@ extension LoginViewController: UITextFieldDelegate {
                  shouldChangeCharactersIn range: NSRange,
                  replacementString string: String) -> Bool {
 
+    guard
+      let existingText = textField.text,
+      let rangeExpression = Range(range, in: existingText) else {
+        return false
+    }
+
+    let currentText = existingText.replacingCharacters(in: rangeExpression, with: string)
+
     if textField == emailField {
-      print("Editing email: \(string)")
+      presenter.update(email: currentText)
     }
 
     if textField == passwordField {

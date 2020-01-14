@@ -2,12 +2,16 @@ import Foundation
 
 class LoginPresenter {
   
-  // MARK: - Properties
+  // MARK: - Public properties
   
   weak var view: LoginViewContract!
   var router: RouterContract
 
   let useCase: LoginUseCaseContract
+
+  // MARK: - Private properties
+
+  var currentEmail: String?
   
   // MARK: - Initialisers
   
@@ -20,6 +24,7 @@ class LoginPresenter {
 
 extension LoginPresenter: LoginPresenterContract {
 
+  // MARK: - Life cycle
   
   func viewDidLoad() {
     // Test the /authenticate endpoint
@@ -34,5 +39,11 @@ extension LoginPresenter: LoginPresenterContract {
   
   func viewWillAppear() {
     // do something
+  }
+
+  // MARK: - View actions
+
+  func update(email newEmail: String) {
+    currentEmail = newEmail
   }
 }
