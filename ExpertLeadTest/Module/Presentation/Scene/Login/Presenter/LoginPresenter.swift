@@ -26,15 +26,6 @@ extension LoginPresenter: LoginPresenterContract {
 
     // Set up the view
     updateLoginButton()
-
-    // Test the /authenticate endpoint
-    let user = Credentials(email: "user@test.com", password: "This1sATest!")
-    useCase.authenticate(user: user, onSuccess: { authenticatedUser in
-      print(authenticatedUser)
-    }) { displayableError in
-      print(displayableError)
-    }
-
   }
   
   func viewWillAppear() {
@@ -51,6 +42,14 @@ extension LoginPresenter: LoginPresenterContract {
   func update(password newPassword: String) {
     save(password: newPassword)
     updateLoginButton()
+  }
+
+  func login() {
+    useCase.authenticate(onSuccess: { authenticatedUser in
+      print(authenticatedUser)
+    }) { displayableError in
+      print(displayableError)
+    }
   }
 }
 

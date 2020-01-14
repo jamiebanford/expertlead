@@ -12,4 +12,6 @@ protocol LoginPresenterContract: class {
 
   func update(email newEmail: String)
   func update(password newPassword: String)
+
+  func login()
 }

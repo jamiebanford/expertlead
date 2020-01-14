@@ -24,11 +24,17 @@ class LoginUseCase: LoginUseCaseContract {
     self.apiGateway = apiGateway
   }
 
-  func authenticate(user: Credentials,
-                    onSuccess: @escaping (AuthenticatedUser) -> (),
+  func authenticate(onSuccess: @escaping (AuthenticatedUser) -> (),
                     onFailure: @escaping (DisplayableError) -> ()) {
-    apiGateway.authenticate(user: user, onSuccess: { response in
-      let authenticatedUser = AuthenticatedUser(email: user.email, token: response.token)
+    guard
+      let email = currentEmail,
+      let password = currentPassword
+      else { return }
+
+    let credentials = Credentials(email: email, password: password)
+
+    apiGateway.authenticate(credentials: credentials, onSuccess: { response in
+      let authenticatedUser = AuthenticatedUser(email: credentials.email, token: response.token)
       onSuccess(authenticatedUser)
     }) { apiError in
       // TODO: Explore how to transform an API message into a display message

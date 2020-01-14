@@ -9,7 +9,6 @@ protocol LoginUseCaseContract: class {
 
   var hasValidCredentials: Bool { get }
 
-  func authenticate(user: Credentials,
-                    onSuccess: @escaping (_ response: AuthenticatedUser) -> (),
+  func authenticate(onSuccess: @escaping (_ response: AuthenticatedUser) -> (),
                     onFailure: @escaping (_ message: DisplayableError) -> ())
 }

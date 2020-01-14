@@ -27,7 +27,7 @@ class LoginViewController: UIViewController, LoginViewContract {
   // MARK: - IB Actions
 
   @IBAction func buttonPressed(_ sender: Any) {
-      print("Login pressed!")
+    presenter.login()
   }
 
   // MARK: View actions

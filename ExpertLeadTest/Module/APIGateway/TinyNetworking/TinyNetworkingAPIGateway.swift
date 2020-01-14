@@ -17,11 +17,11 @@ class TinyNetworkingAPIGateway: APIGatewayContract {
 
   // MARK: - Public methods
 
-  func authenticate(user: Credentials,
+  func authenticate(credentials: Credentials,
                     onSuccess: @escaping (SuccessfulAuthenticationResponse) -> (),
                     onFailure: @escaping (APIAuthenticationError) -> ()) {
 
-    let endpoint = makeEndpointToAuthenticate(user: user)
+    let endpoint = makeEndpointToAuthenticate(credentials: credentials)
 
     urlSession.load(endpoint) { result in
       switch result {
@@ -52,12 +52,12 @@ private extension TinyNetworkingAPIGateway {
     let message: String
   }
 
-  func makeEndpointToAuthenticate(user: Credentials) -> Endpoint<TinyNetworkingAPIGateway.AuthenticationResponse> {
+  func makeEndpointToAuthenticate(credentials: Credentials) -> Endpoint<TinyNetworkingAPIGateway.AuthenticationResponse> {
 
     let url = urlFactory.makeAuthenticateURL()
     let endpoint = Endpoint<AuthenticationResponse>(json: .post,
                                                     url: url,
-                                                    body: user,
+                                                    body: credentials,
                                                     expectedStatusCode: { code in
                                                       return code == 200 || code == 401 || code == 500
     })
