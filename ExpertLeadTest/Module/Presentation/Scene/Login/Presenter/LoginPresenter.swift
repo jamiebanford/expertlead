@@ -53,6 +53,10 @@ extension LoginPresenter: LoginPresenterContract {
   }
 
   func update(password newPassword: String) {
-    currentPassword = newPassword
+    if useCase.validate(password: newPassword) {
+      currentPassword = newPassword
+    } else {
+      currentPassword = nil
+    }
   }
 }

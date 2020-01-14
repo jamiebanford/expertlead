@@ -5,6 +5,7 @@ protocol LoginUseCaseContract: class {
   var apiGateway: APIGatewayContract { get }
 
   func validate(email newEmail: String) -> Bool
+  func validate(password newPassword: String) -> Bool
 
   func authenticate(user: Credentials,
                     onSuccess: @escaping (_ response: AuthenticatedUser) -> (),

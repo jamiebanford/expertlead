@@ -12,6 +12,10 @@ class LoginUseCase: LoginUseCaseContract {
     return newEmail.contains("@")
   }
 
+  func validate(password newPassword: String) -> Bool {
+    return !newPassword.isEmpty
+  }
+
   func authenticate(user: Credentials,
                     onSuccess: @escaping (AuthenticatedUser) -> (),
                     onFailure: @escaping (DisplayableError) -> ()) {
