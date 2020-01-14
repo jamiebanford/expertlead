@@ -25,6 +25,7 @@ extension LoginPresenter: LoginPresenterContract {
   func viewDidLoad() {
 
     // Set up the view
+    setUpActivityIndicator()
     updateLoginButton()
   }
   
@@ -45,10 +46,15 @@ extension LoginPresenter: LoginPresenterContract {
   }
 
   func login() {
+
+    prepareViewForLoginAttempt()
+
     useCase.authenticate(onSuccess: { authenticatedUser in
       print(authenticatedUser)
+      self.updateViewAfterLoginAttempt()
     }) { displayableError in
       print(displayableError)
+      self.updateViewAfterLoginAttempt()
     }
   }
 }
@@ -65,6 +71,21 @@ private extension LoginPresenter {
   func save(password newPassword: String) {
 
     useCase.currentPassword = newPassword
+  }
+
+  func prepareViewForLoginAttempt() {
+    view.showActivityIndicator()
+    view.disableLoginButton()
+  }
+
+  func updateViewAfterLoginAttempt() {
+    view.hideActivityIndicator()
+    view.enableLoginButton()
+  }
+
+  func setUpActivityIndicator() {
+    // Always animating and hides when stopped set in the storyboard so this should be all that is needed...
+    view.hideActivityIndicator()
   }
 
   func updateLoginButton() {

@@ -33,11 +33,23 @@ class LoginViewController: UIViewController, LoginViewContract {
   // MARK: View actions
 
   func enableLoginButton() {
-    loginButton.isEnabled = true
+    DispatchQueue.main.async { [weak self] in
+      self?.loginButton.isEnabled = true
+    }
   }
 
   func disableLoginButton() {
     loginButton.isEnabled = false
+  }
+
+  func showActivityIndicator() {
+    activityIndicatory.startAnimating()
+  }
+
+  func hideActivityIndicator() {
+    DispatchQueue.main.async { [weak self] in
+      self?.activityIndicatory.stopAnimating()
+    }
   }
 }
 
