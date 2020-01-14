@@ -16,18 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2vU-SB-6hO">
-                                <rect key="frame" x="171.5" y="64" width="32" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2vU-SB-6hO">
+                                <rect key="frame" x="64" y="64" width="247.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="n5Y-6H-HuO"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qnx-ro-hTJ">
-                                <rect key="frame" x="171.5" y="106" width="32" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qnx-ro-hTJ">
+                                <rect key="frame" x="64" y="106" width="247.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="t7Y-Tw-ubs"/>
                                 </connections>
@@ -52,6 +52,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gTd-ap-D4e" firstAttribute="centerX" secondItem="2vU-SB-6hO" secondAttribute="centerX" id="4Ab-XK-bfw"/>
+                            <constraint firstItem="2vU-SB-6hO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.66" id="7lh-wV-E8n"/>
                             <constraint firstItem="rds-LN-fLL" firstAttribute="centerX" secondItem="2vU-SB-6hO" secondAttribute="centerX" id="9Te-hK-Dvj"/>
                             <constraint firstItem="qnx-ro-hTJ" firstAttribute="top" secondItem="2vU-SB-6hO" secondAttribute="bottom" constant="8" id="9Vw-Hn-xUu"/>
                             <constraint firstItem="gTd-ap-D4e" firstAttribute="top" secondItem="jsr-y5-uqN" secondAttribute="bottom" constant="8" id="GiM-mv-nnb"/>
@@ -59,6 +60,7 @@
                             <constraint firstItem="jsr-y5-uqN" firstAttribute="centerX" secondItem="2vU-SB-6hO" secondAttribute="centerX" id="IJ7-Bu-xJ4"/>
                             <constraint firstItem="2vU-SB-6hO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qmq-xS-Aa4"/>
                             <constraint firstItem="2vU-SB-6hO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="pID-LD-RJU"/>
+                            <constraint firstItem="qnx-ro-hTJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.66" id="tOe-0o-edN"/>
                             <constraint firstItem="jsr-y5-uqN" firstAttribute="top" secondItem="qnx-ro-hTJ" secondAttribute="bottom" constant="8" id="uG2-nX-JGb"/>
                             <constraint firstItem="2vU-SB-6hO" firstAttribute="centerX" secondItem="qnx-ro-hTJ" secondAttribute="centerX" id="vwh-IT-IAc"/>
                         </constraints>
@@ -75,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-177" y="32"/>
+            <point key="canvasLocation" x="-178.40000000000001" y="31.934032983508249"/>
         </scene>
         <!--Success View Controller-->
         <scene sceneID="7et-qh-I06">
