@@ -33,9 +33,7 @@ class LoginViewController: UIViewController, LoginViewContract {
   // MARK: View actions
 
   func enableLoginButton() {
-    DispatchQueue.main.async { [weak self] in
-      self?.loginButton.isEnabled = true
-    }
+    loginButton.isEnabled = true
   }
 
   func disableLoginButton() {
@@ -47,9 +45,7 @@ class LoginViewController: UIViewController, LoginViewContract {
   }
 
   func hideActivityIndicator() {
-    DispatchQueue.main.async { [weak self] in
-      self?.activityIndicatory.stopAnimating()
-    }
+    activityIndicatory.stopAnimating()
   }
 
   func clearErrorMessage() {
@@ -57,9 +53,16 @@ class LoginViewController: UIViewController, LoginViewContract {
   }
 
   func update(errorMessage newErrorMessage: String) {
-    DispatchQueue.main.async { [weak self] in
-      self?.errorMessageLabel.text = newErrorMessage
-    }
+    errorMessageLabel.text = newErrorMessage
+  }
+
+  func updateLoginButtonForRequestInProgress() {
+    // ...
+  }
+
+  func updateLoginButtonForFailedRequest() {
+    loginButton.setTitle("Try again", for: .normal)
+    loginButton.setTitle("Try again", for: .disabled)
   }
 }
 
