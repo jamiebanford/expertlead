@@ -8,11 +8,6 @@ class LoginPresenter {
   var router: RouterContract
 
   let useCase: LoginUseCaseContract
-
-  // MARK: - Private properties
-
-  var currentEmail: String?
-  var currentPassword: String?
   
   // MARK: - Initialisers
   
@@ -28,6 +23,10 @@ extension LoginPresenter: LoginPresenterContract {
   // MARK: - Life cycle
   
   func viewDidLoad() {
+
+    // Set up the view
+    updateLoginButton()
+
     // Test the /authenticate endpoint
     let user = Credentials(email: "user@test.com", password: "This1sATest!")
     useCase.authenticate(user: user, onSuccess: { authenticatedUser in
@@ -45,18 +44,36 @@ extension LoginPresenter: LoginPresenterContract {
   // MARK: - View actions
 
   func update(email newEmail: String) {
-    if useCase.validate(email: newEmail) {
-      currentEmail = newEmail
-    } else {
-      currentEmail = nil
-    }
+    save(email: newEmail)
+    updateLoginButton()
   }
 
   func update(password newPassword: String) {
-    if useCase.validate(password: newPassword) {
-      currentPassword = newPassword
+    save(password: newPassword)
+    updateLoginButton()
+  }
+}
+
+// MARK: - Private helper methods
+
+private extension LoginPresenter {
+
+  func save(email newEmail: String) {
+
+    useCase.currentEmail = newEmail
+  }
+
+  func save(password newPassword: String) {
+
+    useCase.currentPassword = newPassword
+  }
+
+  func updateLoginButton() {
+
+    if useCase.hasValidCredentials {
+      view.enableLoginButton()
     } else {
-      currentPassword = nil
+      view.disableLoginButton()
     }
   }
 }

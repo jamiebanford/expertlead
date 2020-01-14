@@ -1,5 +1,7 @@
 import Foundation
 
 protocol LoginViewContract: class {
-  // Stub...
+
+  func enableLoginButton()
+  func disableLoginButton()
 }

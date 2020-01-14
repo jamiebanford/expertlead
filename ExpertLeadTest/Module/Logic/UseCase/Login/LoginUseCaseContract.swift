@@ -4,8 +4,10 @@ protocol LoginUseCaseContract: class {
 
   var apiGateway: APIGatewayContract { get }
 
-  func validate(email newEmail: String) -> Bool
-  func validate(password newPassword: String) -> Bool
+  var currentEmail: String? { get set }
+  var currentPassword: String? { get set }
+
+  var hasValidCredentials: Bool { get }
 
   func authenticate(user: Credentials,
                     onSuccess: @escaping (_ response: AuthenticatedUser) -> (),

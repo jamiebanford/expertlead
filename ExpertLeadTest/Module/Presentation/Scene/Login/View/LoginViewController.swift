@@ -29,6 +29,16 @@ class LoginViewController: UIViewController, LoginViewContract {
   @IBAction func buttonPressed(_ sender: Any) {
       print("Login pressed!")
   }
+
+  // MARK: View actions
+
+  func enableLoginButton() {
+    loginButton.isEnabled = true
+  }
+
+  func disableLoginButton() {
+    loginButton.isEnabled = false
+  }
 }
 
 // MARK: - Text field delegate
