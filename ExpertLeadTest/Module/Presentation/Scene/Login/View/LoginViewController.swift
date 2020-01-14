@@ -27,6 +27,7 @@ class LoginViewController: UIViewController, LoginViewContract {
   // MARK: - IB Actions
 
   @IBAction func buttonPressed(_ sender: Any) {
+    // TODO: Handle cancel fuctionality
     presenter.login()
   }
 
@@ -57,7 +58,8 @@ class LoginViewController: UIViewController, LoginViewContract {
   }
 
   func updateLoginButtonForRequestInProgress() {
-    // ...
+    loginButton.setTitle("Cancel", for: .normal)
+    loginButton.setTitle("Cancel", for: .disabled)
   }
 
   func updateLoginButtonForFailedRequest() {

@@ -82,8 +82,8 @@ private extension LoginPresenter {
 
   func prepareViewForLoginAttempt() {
     view.showActivityIndicator()
-    view.disableLoginButton()
     view.clearErrorMessage()
+    view.updateLoginButtonForRequestInProgress()
   }
 
   func updateViewAfterSuccessfulLoginAttempt() {
