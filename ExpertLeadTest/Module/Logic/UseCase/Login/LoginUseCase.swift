@@ -8,6 +8,10 @@ class LoginUseCase: LoginUseCaseContract {
     self.apiGateway = apiGateway
   }
 
+  func validate(email newEmail: String) -> Bool {
+    return newEmail.contains("@")
+  }
+
   func authenticate(user: Credentials,
                     onSuccess: @escaping (AuthenticatedUser) -> (),
                     onFailure: @escaping (DisplayableError) -> ()) {

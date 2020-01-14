@@ -45,7 +45,11 @@ extension LoginPresenter: LoginPresenterContract {
   // MARK: - View actions
 
   func update(email newEmail: String) {
-    currentEmail = newEmail
+    if useCase.validate(email: newEmail) {
+      currentEmail = newEmail
+    } else {
+      currentEmail = nil
+    }
   }
 
   func update(password newPassword: String) {
