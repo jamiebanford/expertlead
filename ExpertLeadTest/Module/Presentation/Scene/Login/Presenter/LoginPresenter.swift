@@ -23,26 +23,23 @@ extension LoginPresenter: LoginPresenterContract {
   // MARK: - Life cycle
   
   func viewDidLoad() {
-
-    setUpErrorMessageLabel()
-    setUpActivityIndicator()
-    updateLoginButton()
+    setUpView()
   }
   
   func viewWillAppear() {
-    // do something
+    setUpView()
   }
 
   // MARK: - View actions
 
   func update(email newEmail: String) {
     save(email: newEmail)
-    updateLoginButton()
+    enableLoginButton()
   }
 
   func update(password newPassword: String) {
     save(password: newPassword)
-    updateLoginButton()
+    enableLoginButton()
   }
 
   func loginButtonPressed() {
@@ -94,13 +91,24 @@ private extension LoginPresenter {
     view.hideActivityIndicator()
   }
 
-  func updateLoginButton() {
+  func enableLoginButton() {
 
     if useCase.hasValidCredentials {
       view.enableLoginButton()
     } else {
       view.disableLoginButton()
     }
+  }
+
+  func setUpView() {
+    setUpErrorMessageLabel()
+    setUpActivityIndicator()
+    setUpLoginButton()
+    enableLoginButton()
+  }
+
+  func setUpLoginButton() {
+    view.setUpLoginButton()
   }
 
   func display(errorMessage: String) {

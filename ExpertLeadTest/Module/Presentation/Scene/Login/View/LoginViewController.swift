@@ -56,6 +56,11 @@ class LoginViewController: UIViewController, LoginViewContract {
     errorMessageLabel.text = newErrorMessage
   }
 
+  func setUpLoginButton() {
+    loginButton.setTitle("Login", for: .normal)
+    loginButton.setTitle("Login", for: .disabled)
+  }
+
   func updateLoginButtonForRequestInProgress() {
     loginButton.setTitle("Cancel", for: .normal)
     loginButton.setTitle("Cancel", for: .disabled)

@@ -4,6 +4,7 @@ protocol LoginViewContract: class {
 
   func enableLoginButton()
   func disableLoginButton()
+  func setUpLoginButton()
   func updateLoginButtonForRequestInProgress()
   func updateLoginButtonForFailedRequest()
 
