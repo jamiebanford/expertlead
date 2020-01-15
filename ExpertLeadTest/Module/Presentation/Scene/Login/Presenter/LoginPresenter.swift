@@ -45,24 +45,14 @@ extension LoginPresenter: LoginPresenterContract {
     updateLoginButton()
   }
 
-  func login() {
+  func loginButtonPressed() {
 
-    prepareViewForLoginAttempt()
-
-    useCase.authenticate(onSuccess: { authenticatedUser in
-
-      DispatchQueue.main.async { [weak self] in
-        self?.updateViewAfterSuccessfulLoginAttempt()
-        self?.didSuccessFullyAuthenticate(user: authenticatedUser)
-      }
-
-    }, onFailure: { displayableError in
-
-      DispatchQueue.main.async { [weak self] in
-        self?.updateViewAfterFailedLoginAttempt()
-        self?.display(errorMessage: displayableError.message)
-      }
-    })
+    if useCase.isLoginAttemptInProgress {
+      // TODO: cancel the attempt
+      cancel()
+    } else {
+      login()
+    }
   }
 }
 
@@ -123,5 +113,28 @@ private extension LoginPresenter {
     // Saving the token is probably a good idea...
 
     router.presentSuccess()
+  }
+
+  func login() {
+    prepareViewForLoginAttempt()
+
+    useCase.authenticate(onSuccess: { authenticatedUser in
+
+      DispatchQueue.main.async { [weak self] in
+        self?.updateViewAfterSuccessfulLoginAttempt()
+        self?.didSuccessFullyAuthenticate(user: authenticatedUser)
+      }
+
+    }, onFailure: { displayableError in
+
+      DispatchQueue.main.async { [weak self] in
+        self?.updateViewAfterFailedLoginAttempt()
+        self?.display(errorMessage: displayableError.message)
+      }
+    })
+  }
+
+  func cancel() {
+    useCase.cancelAuthenticationRequest()
   }
 }

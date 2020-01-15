@@ -27,8 +27,7 @@ class LoginViewController: UIViewController, LoginViewContract {
   // MARK: - IB Actions
 
   @IBAction func buttonPressed(_ sender: Any) {
-    // TODO: Handle cancel fuctionality
-    presenter.login()
+    presenter.loginButtonPressed()
   }
 
   // MARK: View actions

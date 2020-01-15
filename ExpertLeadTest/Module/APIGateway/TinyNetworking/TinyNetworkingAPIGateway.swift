@@ -8,6 +8,8 @@ class TinyNetworkingAPIGateway: APIGatewayContract {
   private let urlSession: URLSession
   private let urlFactory: GatewayURLFactoryContract
 
+  private var currentURLSessionDataTask: URLSessionDataTask?
+
   // MARK: - Life cycle
 
   init(urlFactory: GatewayURLFactoryContract, urlSession: URLSession = URLSession.shared) {
@@ -23,7 +25,7 @@ class TinyNetworkingAPIGateway: APIGatewayContract {
 
     let endpoint = makeEndpointToAuthenticate(credentials: credentials)
 
-    urlSession.load(endpoint) { result in
+    currentURLSessionDataTask = urlSession.load(endpoint) { result in
       switch result {
         case .success(let response):
           if let token = response.token {
@@ -39,6 +41,10 @@ class TinyNetworkingAPIGateway: APIGatewayContract {
           onFailure(error)
       }
     }
+  }
+
+  func cancelCurrentRequest() {
+    currentURLSessionDataTask?.cancel()
   }
 }
 

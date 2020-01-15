@@ -8,7 +8,10 @@ protocol LoginUseCaseContract: class {
   var currentPassword: String? { get set }
 
   var hasValidCredentials: Bool { get }
+  var isLoginAttemptInProgress: Bool { get set }
 
   func authenticate(onSuccess: @escaping (_ response: AuthenticatedUser) -> (),
                     onFailure: @escaping (_ message: DisplayableError) -> ())
+
+  func cancelAuthenticationRequest()
 }

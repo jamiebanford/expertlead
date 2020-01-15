@@ -15,6 +15,7 @@ class LoginUseCase: LoginUseCaseContract {
     return isValid(email: email) && isValid(password: password)
   }
 
+  var isLoginAttemptInProgress = false
   var currentEmail: String?
   var currentPassword: String?
 
@@ -31,17 +32,30 @@ class LoginUseCase: LoginUseCaseContract {
       let password = currentPassword
       else { return }
 
+    isLoginAttemptInProgress = true
+
     let credentials = Credentials(email: email, password: password)
 
-    apiGateway.authenticate(credentials: credentials, onSuccess: { response in
+    apiGateway.authenticate(credentials: credentials, onSuccess: { [weak self] response in
+
+      self?.isLoginAttemptInProgress = false
+
       let authenticatedUser = AuthenticatedUser(email: credentials.email, token: response.token)
       onSuccess(authenticatedUser)
-    }) { apiError in
+
+    }) { [weak self] apiError in
+
+      self?.isLoginAttemptInProgress = false
+
       // TODO: Explore how to transform an API message into a display message
       let displayMessage = apiError.message ?? "A generic error message"
       let displayableError = DisplayableError(message: displayMessage)
       onFailure(displayableError)
     }
+  }
+
+  func cancelAuthenticationRequest() {
+    apiGateway.cancelCurrentRequest()
   }
 
   // MARK: - Private helper methods
