@@ -42,8 +42,8 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gTd-ap-D4e">
                                 <rect key="frame" x="177.5" y="186" width="20" height="20"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rds-LN-fLL">
-                                <rect key="frame" x="168.5" y="214" width="38" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rds-LN-fLL">
+                                <rect key="frame" x="64" y="214" width="247.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,6 +58,7 @@
                             <constraint firstItem="gTd-ap-D4e" firstAttribute="top" secondItem="jsr-y5-uqN" secondAttribute="bottom" constant="8" id="GiM-mv-nnb"/>
                             <constraint firstItem="rds-LN-fLL" firstAttribute="top" secondItem="gTd-ap-D4e" secondAttribute="bottom" constant="8" id="H6N-nm-ald"/>
                             <constraint firstItem="jsr-y5-uqN" firstAttribute="centerX" secondItem="2vU-SB-6hO" secondAttribute="centerX" id="IJ7-Bu-xJ4"/>
+                            <constraint firstItem="rds-LN-fLL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.66" id="Q7n-Lh-9Rv"/>
                             <constraint firstItem="2vU-SB-6hO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qmq-xS-Aa4"/>
                             <constraint firstItem="2vU-SB-6hO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="pID-LD-RJU"/>
                             <constraint firstItem="qnx-ro-hTJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.66" id="tOe-0o-edN"/>
