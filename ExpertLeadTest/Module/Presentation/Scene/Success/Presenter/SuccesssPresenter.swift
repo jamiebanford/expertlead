@@ -18,7 +18,7 @@ class SuccessPresenter {
 extension SuccessPresenter: SuccessPresenterContract {
 
   func viewDidLoad() {
-    // do something
+    view.setUp()
   }
 
   func viewWillAppear() {
