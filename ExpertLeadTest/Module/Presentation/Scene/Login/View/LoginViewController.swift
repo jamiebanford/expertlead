@@ -32,6 +32,34 @@ class LoginViewController: UIViewController, LoginViewContract {
 
   // MARK: View actions
 
+  func setUpEmailField() {
+    emailField.text = ""
+    emailField.layer.borderWidth = 2
+    emailField.layer.borderColor = UIColor.black.cgColor
+  }
+
+  func setUpPasswordField() {
+    passwordField.text = ""
+    passwordField.layer.borderWidth = 2
+    passwordField.layer.borderColor = UIColor.black.cgColor
+  }
+
+  func updateEmailFieldForValidEmail() {
+    emailField.layer.borderColor = UIColor.green.cgColor
+  }
+
+  func updateEmailFieldForInvalidEmail() {
+    emailField.layer.borderColor = UIColor.red.cgColor
+  }
+
+  func updatePasswordFieldForValidPassword() {
+    passwordField.layer.borderColor = UIColor.green.cgColor
+  }
+
+  func updatePasswordFieldForInvalidPassword() {
+    passwordField.layer.borderColor = UIColor.red.cgColor
+  }
+
   func enableLoginButton() {
     loginButton.isEnabled = true
   }

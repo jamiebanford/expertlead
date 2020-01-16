@@ -6,23 +6,32 @@ class LoginUseCase: LoginUseCaseContract {
 
   let apiGateway: APIGatewayContract
 
-  var hasValidCredentials: Bool {
-    guard
-         let email = currentEmail,
-         let password = currentPassword
-         else { return false }
+  var hasValidCredentials: (validEmail: Bool, validPassword: Bool) {
 
-    return isValid(email: email) && isValid(password: password)
+    return (isValid(email: currentEmail), isValid(password: currentPassword))
   }
 
   var isLoginAttemptInProgress = false
-  var currentEmail: String?
-  var currentPassword: String?
+
+  // MARK: Private API
+
+  private var currentEmail: String?
+  private var currentPassword: String?
 
   // MARK: - Life cycle
 
   init(apiGateway: APIGatewayContract) {
     self.apiGateway = apiGateway
+  }
+
+  // MARK: - Public API
+
+  func update(email newEmail: String) {
+    currentEmail = newEmail
+  }
+
+  func update(password newPassword: String) {
+    currentPassword = newPassword
   }
 
   func authenticate(onSuccess: @escaping (AuthenticatedUser) -> (),
@@ -60,11 +69,19 @@ class LoginUseCase: LoginUseCaseContract {
 
   // MARK: - Private helper methods
 
-  private func isValid(email newEmail: String) -> Bool {
-    return newEmail.contains("@")
+  private func isValid(email newEmail: String?) -> Bool {
+    guard let email = newEmail else {
+      return false
+    }
+
+    return email.contains("@")
   }
 
-  private func isValid(password newPassword: String) -> Bool {
-    return !newPassword.isEmpty
+  private func isValid(password newPassword: String?) -> Bool {
+    guard let password = newPassword else {
+      return false
+    }
+
+    return !password.isEmpty
   }
 }

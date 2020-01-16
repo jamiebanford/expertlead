@@ -16,6 +16,7 @@
 		16BD33D623CCDDA100C8B8FA /* GatewayURLFactoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD33D523CCDDA100C8B8FA /* GatewayURLFactoryContract.swift */; };
 		16BD33D823CCDDCA00C8B8FA /* GatewayURLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD33D723CCDDCA00C8B8FA /* GatewayURLFactory.swift */; };
 		16BD33DE23CCED6D00C8B8FA /* GatewayURLFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD33DD23CCED6D00C8B8FA /* GatewayURLFactoryTests.swift */; };
+		16CA2F0023D0520800CD1B89 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 16CA2EFF23D0520800CD1B89 /* README.md */; };
 		16D5A0B423C8C39500B64A29 /* LoginUseCaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5A0B323C8C39500B64A29 /* LoginUseCaseContract.swift */; };
 		16D5A0B823C8C48D00B64A29 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5A0B723C8C48D00B64A29 /* LoginUseCase.swift */; };
 		16D727F023C748F100684881 /* TinyNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 16D727EF23C748F100684881 /* TinyNetworking */; };
@@ -55,6 +56,7 @@
 		16BD33D523CCDDA100C8B8FA /* GatewayURLFactoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayURLFactoryContract.swift; sourceTree = "<group>"; };
 		16BD33D723CCDDCA00C8B8FA /* GatewayURLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayURLFactory.swift; sourceTree = "<group>"; };
 		16BD33DD23CCED6D00C8B8FA /* GatewayURLFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayURLFactoryTests.swift; sourceTree = "<group>"; };
+		16CA2EFF23D0520800CD1B89 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		16D5A0B323C8C39500B64A29 /* LoginUseCaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseContract.swift; sourceTree = "<group>"; };
 		16D5A0B723C8C48D00B64A29 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		16D5A0B923C8C9D200B64A29 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ExpertLeadTest/Module/Login/Interactor/User.swift; sourceTree = SOURCE_ROOT; };
@@ -209,6 +211,7 @@
 		AA1476DE212AEF1700214093 = {
 			isa = PBXGroup;
 			children = (
+				16CA2EFF23D0520800CD1B89 /* README.md */,
 				AA1476E9212AEF1700214093 /* ExpertLeadTest */,
 				16D727F923C7520F00684881 /* ExpertLeadTestTests */,
 				AA1476E8212AEF1700214093 /* Products */,
@@ -413,6 +416,7 @@
 			files = (
 				AA1476F5212AEF1800214093 /* LaunchScreen.storyboard in Resources */,
 				AA1476F2212AEF1800214093 /* Assets.xcassets in Resources */,
+				16CA2F0023D0520800CD1B89 /* README.md in Resources */,
 				AA1476F0212AEF1700214093 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

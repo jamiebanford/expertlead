@@ -34,12 +34,10 @@ extension LoginPresenter: LoginPresenterContract {
 
   func update(email newEmail: String) {
     save(email: newEmail)
-    enableLoginButton()
   }
 
   func update(password newPassword: String) {
     save(password: newPassword)
-    enableLoginButton()
   }
 
   func loginButtonPressed() {
@@ -59,12 +57,18 @@ private extension LoginPresenter {
 
   func save(email newEmail: String) {
 
-    useCase.currentEmail = newEmail
+    useCase.update(email: newEmail)
+
+    updateEmailFieldAfterEmailTextEntry()
+    updateLoginButtonAfterTextEntry()
   }
 
   func save(password newPassword: String) {
 
-    useCase.currentPassword = newPassword
+    useCase.update(password: newPassword)
+
+    updatePasswordFieldAfterPasswordTextEntry()
+    updateLoginButtonAfterTextEntry()
   }
 
   func prepareViewForLoginAttempt() {
@@ -91,20 +95,46 @@ private extension LoginPresenter {
     view.hideActivityIndicator()
   }
 
-  func enableLoginButton() {
+  func updateEmailFieldAfterEmailTextEntry() {
 
-    if useCase.hasValidCredentials {
-      view.enableLoginButton()
+    let (validEmail, _) = useCase.hasValidCredentials
+
+    if validEmail {
+      view.updateEmailFieldForValidEmail()
     } else {
-      view.disableLoginButton()
+      view.updateEmailFieldForInvalidEmail()
+    }
+  }
+
+  func updatePasswordFieldAfterPasswordTextEntry() {
+
+    let (_, validPassword) = useCase.hasValidCredentials
+
+    if validPassword {
+      view.updatePasswordFieldForValidPassword()
+    } else {
+      view.updatePasswordFieldForInvalidPassword()
+    }
+  }
+
+  func updateLoginButtonAfterTextEntry() {
+
+    let (validEmail, validPassword) = useCase.hasValidCredentials
+
+    switch (validEmail, validPassword) {
+      case (true, true):
+        view.enableLoginButton()
+      default:
+        view.disableLoginButton()
     }
   }
 
   func setUpView() {
+    view.setUpEmailField()
+    view.setUpPasswordField()
     setUpErrorMessageLabel()
     setUpActivityIndicator()
     setUpLoginButton()
-    enableLoginButton()
   }
 
   func setUpLoginButton() {
