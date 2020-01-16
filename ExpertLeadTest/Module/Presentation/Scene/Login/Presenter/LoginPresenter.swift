@@ -86,6 +86,14 @@ private extension LoginPresenter {
     view.updateLoginButtonForFailedRequest()
   }
 
+  func setUpEmailTextField() {
+    view.setUpEmailField()
+  }
+
+  func setUpPasswordTextField() {
+    view.setUpPasswordField()
+  }
+
   func setUpErrorMessageLabel() {
     view.clearErrorMessage()
   }
@@ -130,8 +138,8 @@ private extension LoginPresenter {
   }
 
   func setUpView() {
-    view.setUpEmailField()
-    view.setUpPasswordField()
+    setUpEmailTextField()
+    setUpPasswordTextField()
     setUpErrorMessageLabel()
     setUpActivityIndicator()
     setUpLoginButton()
