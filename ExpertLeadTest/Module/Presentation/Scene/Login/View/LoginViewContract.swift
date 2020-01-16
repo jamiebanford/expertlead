@@ -13,6 +13,7 @@ protocol LoginViewContract: class {
   func setUpLoginButton()
   func updateLoginButtonForRequestInProgress()
   func updateLoginButtonForFailedRequest()
+  func resignFirstResponder()
 
   func showActivityIndicator()
   func hideActivityIndicator()

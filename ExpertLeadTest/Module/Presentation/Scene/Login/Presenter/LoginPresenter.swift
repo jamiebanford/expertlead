@@ -158,6 +158,7 @@ private extension LoginPresenter {
     // TODO: Do something with the authenticated user
     // Saving the token is probably a good idea...
 
+    view.resignFirstResponder()
     router.presentSuccess()
   }
 

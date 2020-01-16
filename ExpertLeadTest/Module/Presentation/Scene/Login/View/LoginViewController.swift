@@ -98,6 +98,14 @@ class LoginViewController: UIViewController, LoginViewContract {
     loginButton.setTitle("Try again", for: .normal)
     loginButton.setTitle("Try again", for: .disabled)
   }
+
+  func resignFirstResponder() {
+    if emailField.isFirstResponder {
+      emailField.resignFirstResponder()
+    } else if passwordField.isFirstResponder {
+      passwordField.resignFirstResponder()
+    }
+  }
 }
 
 // MARK: - Text field delegate
