@@ -1,6 +1,18 @@
 # Coding Challenge
 
-*If you have any questions, please contact us.*
+## Introduction
+
+This project is organised along the lines of the architecture used. The presentation layer is on top, followed by the application logic layer, and lastly the (data) gateways are at the bottom. The unit tests are organised in the same way.
+
+Both the presentation and application logic layers are *fairly* well-covered in tests but the gateway is not. As the gateway is only responsible for fetching external data (there is no persistence in the app) and it uses a [third party library](https://github.com/objcio/tiny-networking) for this I didn't want to spend too much time testing someone else's code. That being said, where my code and the third party code meet should be well tested and that is probably the next thing I would do lacking any further instructions. (Although there is part of me that wants to write my own networking code and test *that*.)
+
+I've left in some `TODO`s where I thought it was appropriate. Hopefully these will give some insight into my thought process during development.
+
+There is an atomic commit history and details how I build the project (from the presentation layer down) can be found in the git log.
+
+I also made some simplifying assumptions in places to avoid spending too much time on details. For example the UI doesn't rotate or handle iPad screens correctly; text used in the UI isn't localised; and design primitives such as colours and line widths are hard-coded in views. I wouldn't consider these things correct in a production-ready iOS app I hope that they are acceptable in this coding challenge as I needed to save time to demonstrate other hard skills like writing unit tests and using git correctly.
+
+The project has been tested on iOS 12 and 13 and should run straight out of the bat. Cheers!
 
 ## Task
 

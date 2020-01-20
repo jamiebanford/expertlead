@@ -11,19 +11,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Start the flow
     window = UIWindow(frame: UIScreen.main.bounds)
-    router = Router(window: window!, apiGateway: makeAPIGateway())
+    router = Router(window: window!)
     router.presentLogin()
     window?.makeKeyAndVisible()
 
     return true
-  }
-}
-
-// MARK: - Private factory methods
-
-private extension AppDelegate {
-  func makeAPIGateway() -> TinyNetworkingAPIGateway {
-
-    return TinyNetworkingAPIGateway(urlFactory: GatewayURLFactory())
   }
 }

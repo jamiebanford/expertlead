@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1660435C23C8D03B0076CB50 /* APIGatewayContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660435B23C8D03B0076CB50 /* APIGatewayContract.swift */; };
-		1660435E23C8DEA40076CB50 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660435D23C8DEA40076CB50 /* Credentials.swift */; };
-		1660436023C8DECD0076CB50 /* AuthenticatedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660435F23C8DECD0076CB50 /* AuthenticatedUser.swift */; };
-		1660436223C8DEF90076CB50 /* DisplayableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660436123C8DEF90076CB50 /* DisplayableError.swift */; };
-		1660436623C8DF6F0076CB50 /* SuccessfulAuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660436523C8DF6F0076CB50 /* SuccessfulAuthenticationResponse.swift */; };
-		1660436823C8DFA80076CB50 /* APIAuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660436723C8DFA80076CB50 /* APIAuthenticationError.swift */; };
-		16BD33D623CCDDA100C8B8FA /* GatewayURLFactoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD33D523CCDDA100C8B8FA /* GatewayURLFactoryContract.swift */; };
-		16BD33D823CCDDCA00C8B8FA /* GatewayURLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD33D723CCDDCA00C8B8FA /* GatewayURLFactory.swift */; };
-		16BD33DE23CCED6D00C8B8FA /* GatewayURLFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD33DD23CCED6D00C8B8FA /* GatewayURLFactoryTests.swift */; };
-		16CA2F0023D0520800CD1B89 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 16CA2EFF23D0520800CD1B89 /* README.md */; };
-		16D5A0B423C8C39500B64A29 /* LoginUseCaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5A0B323C8C39500B64A29 /* LoginUseCaseContract.swift */; };
-		16D5A0B823C8C48D00B64A29 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5A0B723C8C48D00B64A29 /* LoginUseCase.swift */; };
-		16D727F023C748F100684881 /* TinyNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 16D727EF23C748F100684881 /* TinyNetworking */; };
-		16D727F323C7519900684881 /* TinyNetworkingAPIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D727F223C7519900684881 /* TinyNetworkingAPIGateway.swift */; };
+		1642ABE523D199C700498972 /* APIGatewayURLFactoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1642ABE323D199C600498972 /* APIGatewayURLFactoryContract.swift */; };
+		1642ABE623D199C700498972 /* APIGatewayURLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1642ABE423D199C600498972 /* APIGatewayURLFactory.swift */; };
+		1642ABE823D19A2B00498972 /* APIGatewayURLFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1642ABE723D19A2B00498972 /* APIGatewayURLFactoryTests.swift */; };
+		1642ABEC23D1A5A100498972 /* TinyNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 1642ABEB23D1A5A100498972 /* TinyNetworking */; };
+		1642ABEF23D1A7A300498972 /* TinyNetworkingEndpointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1642ABEE23D1A7A300498972 /* TinyNetworkingEndpointFactory.swift */; };
+		1642ABF123D1A8B200498972 /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1642ABF023D1A8B200498972 /* AuthenticationResponse.swift */; };
+		1642ABFA23D1AFF400498972 /* PresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1642ABF923D1AFF400498972 /* PresentableError.swift */; };
+		1646827023D09E8200E1B971 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1646826F23D09E8200E1B971 /* README.md */; };
+		1646827423D0C15100E1B971 /* APIGatewayContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1646827323D0C15100E1B971 /* APIGatewayContract.swift */; };
+		1646827923D0C26F00E1B971 /* APIAuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1646827623D0C26F00E1B971 /* APIAuthenticationError.swift */; };
+		1646827A23D0C26F00E1B971 /* SuccessfulAuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1646827723D0C26F00E1B971 /* SuccessfulAuthenticationResponse.swift */; };
+		1646827B23D0C26F00E1B971 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1646827823D0C26F00E1B971 /* Credentials.swift */; };
+		1646827D23D0C3C800E1B971 /* TinyNetworkingAPIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1646827C23D0C3C800E1B971 /* TinyNetworkingAPIGateway.swift */; };
+		1646827F23D0C5BC00E1B971 /* MockAPIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1646827E23D0C5BC00E1B971 /* MockAPIGateway.swift */; };
+		1692C60323D1BC7C0076B255 /* AuthenticatedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C60223D1BC7C0076B255 /* AuthenticatedUser.swift */; };
+		16CA2F0423D0742300CD1B89 /* LoginUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CA2F0323D0742300CD1B89 /* LoginUseCaseTests.swift */; };
+		16CA2F0723D0765000CD1B89 /* MockLoginUseCaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CA2F0623D0765000CD1B89 /* MockLoginUseCaseDelegate.swift */; };
+		16CDA83623CF0CE300DCB54B /* RouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CDA83523CF0CE300DCB54B /* RouterContract.swift */; };
+		16CDA83E23CF264500DCB54B /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CDA83D23CF264500DCB54B /* LoginPresenterTests.swift */; };
+		16CDA84623CF272100DCB54B /* MockLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CDA84523CF272100DCB54B /* MockLoginView.swift */; };
+		16CDA84823CF281F00DCB54B /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CDA84723CF281F00DCB54B /* MockRouter.swift */; };
+		16CDA85023CF347600DCB54B /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CDA84F23CF347600DCB54B /* LoginViewTests.swift */; };
+		16CDA85323CF3F2E00DCB54B /* LoginPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CDA85223CF3F2E00DCB54B /* LoginPresenterMock.swift */; };
+		16CDA85723CF485F00DCB54B /* LoginUseCaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CDA85623CF485F00DCB54B /* LoginUseCaseContract.swift */; };
+		16CDA85923CF487B00DCB54B /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CDA85823CF487B00DCB54B /* LoginUseCase.swift */; };
+		16CDA85B23CF4C3D00DCB54B /* MockLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CDA85A23CF4C3D00DCB54B /* MockLoginUseCase.swift */; };
 		AA1476EB212AEF1700214093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1476EA212AEF1700214093 /* AppDelegate.swift */; };
 		AA1476ED212AEF1700214093 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1476EC212AEF1700214093 /* LoginViewController.swift */; };
 		AA1476F0212AEF1700214093 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1476EE212AEF1700214093 /* Main.storyboard */; };
@@ -37,7 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		16D727FD23C7520F00684881 /* PBXContainerItemProxy */ = {
+		16CDA84023CF264500DCB54B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA1476DF212AEF1700214093 /* Project object */;
 			proxyType = 1;
@@ -47,22 +59,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1660435B23C8D03B0076CB50 /* APIGatewayContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGatewayContract.swift; sourceTree = "<group>"; };
-		1660435D23C8DEA40076CB50 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		1660435F23C8DECD0076CB50 /* AuthenticatedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUser.swift; sourceTree = "<group>"; };
-		1660436123C8DEF90076CB50 /* DisplayableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayableError.swift; sourceTree = "<group>"; };
-		1660436523C8DF6F0076CB50 /* SuccessfulAuthenticationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulAuthenticationResponse.swift; sourceTree = "<group>"; };
-		1660436723C8DFA80076CB50 /* APIAuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAuthenticationError.swift; sourceTree = "<group>"; };
-		16BD33D523CCDDA100C8B8FA /* GatewayURLFactoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayURLFactoryContract.swift; sourceTree = "<group>"; };
-		16BD33D723CCDDCA00C8B8FA /* GatewayURLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayURLFactory.swift; sourceTree = "<group>"; };
-		16BD33DD23CCED6D00C8B8FA /* GatewayURLFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayURLFactoryTests.swift; sourceTree = "<group>"; };
-		16CA2EFF23D0520800CD1B89 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		16D5A0B323C8C39500B64A29 /* LoginUseCaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseContract.swift; sourceTree = "<group>"; };
-		16D5A0B723C8C48D00B64A29 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
-		16D5A0B923C8C9D200B64A29 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ExpertLeadTest/Module/Login/Interactor/User.swift; sourceTree = SOURCE_ROOT; };
-		16D727F223C7519900684881 /* TinyNetworkingAPIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyNetworkingAPIGateway.swift; sourceTree = "<group>"; };
-		16D727F823C7520F00684881 /* ExpertLeadTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpertLeadTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		16D727FC23C7520F00684881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1642ABE323D199C600498972 /* APIGatewayURLFactoryContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIGatewayURLFactoryContract.swift; sourceTree = "<group>"; };
+		1642ABE423D199C600498972 /* APIGatewayURLFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIGatewayURLFactory.swift; sourceTree = "<group>"; };
+		1642ABE723D19A2B00498972 /* APIGatewayURLFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIGatewayURLFactoryTests.swift; sourceTree = "<group>"; };
+		1642ABEE23D1A7A300498972 /* TinyNetworkingEndpointFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyNetworkingEndpointFactory.swift; sourceTree = "<group>"; };
+		1642ABF023D1A8B200498972 /* AuthenticationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationResponse.swift; sourceTree = "<group>"; };
+		1642ABF923D1AFF400498972 /* PresentableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableError.swift; sourceTree = "<group>"; };
+		1646826F23D09E8200E1B971 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1646827323D0C15100E1B971 /* APIGatewayContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGatewayContract.swift; sourceTree = "<group>"; };
+		1646827623D0C26F00E1B971 /* APIAuthenticationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIAuthenticationError.swift; sourceTree = "<group>"; };
+		1646827723D0C26F00E1B971 /* SuccessfulAuthenticationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessfulAuthenticationResponse.swift; sourceTree = "<group>"; };
+		1646827823D0C26F00E1B971 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		1646827C23D0C3C800E1B971 /* TinyNetworkingAPIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyNetworkingAPIGateway.swift; sourceTree = "<group>"; };
+		1646827E23D0C5BC00E1B971 /* MockAPIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIGateway.swift; sourceTree = "<group>"; };
+		1692C60223D1BC7C0076B255 /* AuthenticatedUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedUser.swift; sourceTree = "<group>"; };
+		16CA2F0323D0742300CD1B89 /* LoginUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseTests.swift; sourceTree = "<group>"; };
+		16CA2F0623D0765000CD1B89 /* MockLoginUseCaseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginUseCaseDelegate.swift; sourceTree = "<group>"; };
+		16CDA83523CF0CE300DCB54B /* RouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterContract.swift; sourceTree = "<group>"; };
+		16CDA83B23CF264500DCB54B /* ExpertLeadTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpertLeadTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16CDA83D23CF264500DCB54B /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		16CDA83F23CF264500DCB54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16CDA84523CF272100DCB54B /* MockLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginView.swift; sourceTree = "<group>"; };
+		16CDA84723CF281F00DCB54B /* MockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
+		16CDA84F23CF347600DCB54B /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
+		16CDA85223CF3F2E00DCB54B /* LoginPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterMock.swift; sourceTree = "<group>"; };
+		16CDA85623CF485F00DCB54B /* LoginUseCaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseContract.swift; sourceTree = "<group>"; };
+		16CDA85823CF487B00DCB54B /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		16CDA85A23CF4C3D00DCB54B /* MockLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginUseCase.swift; sourceTree = "<group>"; };
 		AA1476E7212AEF1700214093 /* ExpertLeadTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpertLeadTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1476EA212AEF1700214093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA1476EC212AEF1700214093 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +104,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		16D727F523C7520F00684881 /* Frameworks */ = {
+		16CDA83823CF264500DCB54B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,130 +115,193 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16D727F023C748F100684881 /* TinyNetworking in Frameworks */,
+				1642ABEC23D1A5A100498972 /* TinyNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1660436323C8DF180076CB50 /* TinyNetworking */ = {
+		1642ABED23D1A72800498972 /* Tiny Networking Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				16D727F223C7519900684881 /* TinyNetworkingAPIGateway.swift */,
+				1646827C23D0C3C800E1B971 /* TinyNetworkingAPIGateway.swift */,
+				1642ABEE23D1A7A300498972 /* TinyNetworkingEndpointFactory.swift */,
 			);
-			path = TinyNetworking;
+			path = "Tiny Networking Implementation";
 			sourceTree = "<group>";
 		};
-		1660436423C8DF510076CB50 /* Entity */ = {
+		1642ABF823D1AFE200498972 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				1660436723C8DFA80076CB50 /* APIAuthenticationError.swift */,
-				1660436523C8DF6F0076CB50 /* SuccessfulAuthenticationResponse.swift */,
+				1692C60223D1BC7C0076B255 /* AuthenticatedUser.swift */,
+				1642ABF923D1AFF400498972 /* PresentableError.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		16BD33D423CCDD7500C8B8FA /* GatewayURLFactory */ = {
+		1646827123D0C0EE00E1B971 /* Gateway */ = {
 			isa = PBXGroup;
 			children = (
-				16BD33D523CCDDA100C8B8FA /* GatewayURLFactoryContract.swift */,
-				16BD33D723CCDDCA00C8B8FA /* GatewayURLFactory.swift */,
+				1646827223D0C13D00E1B971 /* API */,
 			);
-			path = GatewayURLFactory;
+			path = Gateway;
 			sourceTree = "<group>";
 		};
-		16BD33D923CCEAFC00C8B8FA /* Presentation */ = {
+		1646827223D0C13D00E1B971 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				AA147714212AF4EB00214093 /* Router.swift */,
-				AA147713212AF36B00214093 /* Storyboard */,
-				16BD33DB23CCEB6500C8B8FA /* Scene */,
+				1646827323D0C15100E1B971 /* APIGatewayContract.swift */,
+				1642ABE323D199C600498972 /* APIGatewayURLFactoryContract.swift */,
+				1642ABE423D199C600498972 /* APIGatewayURLFactory.swift */,
+				1646827523D0C26F00E1B971 /* Entity */,
+				1642ABED23D1A72800498972 /* Tiny Networking Implementation */,
 			);
-			path = Presentation;
+			path = API;
 			sourceTree = "<group>";
 		};
-		16BD33DA23CCEB1900C8B8FA /* Logic */ = {
+		1646827523D0C26F00E1B971 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				16DD0D5F23C8CC4E004608B6 /* Entity */,
-				16D5A0B223C8C36300B64A29 /* UseCase */,
+				1646827623D0C26F00E1B971 /* APIAuthenticationError.swift */,
+				1642ABF023D1A8B200498972 /* AuthenticationResponse.swift */,
+				1646827823D0C26F00E1B971 /* Credentials.swift */,
+				1646827723D0C26F00E1B971 /* SuccessfulAuthenticationResponse.swift */,
 			);
-			path = Logic;
+			path = Entity;
 			sourceTree = "<group>";
 		};
-		16BD33DB23CCEB6500C8B8FA /* Scene */ = {
+		1646828023D0CB9B00E1B971 /* Gateway */ = {
 			isa = PBXGroup;
 			children = (
-				AA147700212AEF5D00214093 /* Login */,
-				AA1476FF212AEF5000214093 /* Success */,
+				1646828123D0CBA400E1B971 /* API */,
 			);
-			path = Scene;
+			path = Gateway;
 			sourceTree = "<group>";
 		};
-		16BD33DC23CCEBA400C8B8FA /* Login */ = {
+		1646828123D0CBA400E1B971 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				16D5A0B323C8C39500B64A29 /* LoginUseCaseContract.swift */,
-				16D5A0B723C8C48D00B64A29 /* LoginUseCase.swift */,
+				1642ABE723D19A2B00498972 /* APIGatewayURLFactoryTests.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		16CA2F0123D073EA00CD1B89 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				16CA2F0223D0740100CD1B89 /* Login */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		16CA2F0223D0740100CD1B89 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				16CA2F0323D0742300CD1B89 /* LoginUseCaseTests.swift */,
+				16CA2F0523D0763D00CD1B89 /* Mocks */,
 			);
 			path = Login;
 			sourceTree = "<group>";
 		};
-		16D5A0B223C8C36300B64A29 /* UseCase */ = {
+		16CA2F0523D0763D00CD1B89 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				16BD33DC23CCEBA400C8B8FA /* Login */,
+				16CA2F0623D0765000CD1B89 /* MockLoginUseCaseDelegate.swift */,
+				1646827E23D0C5BC00E1B971 /* MockAPIGateway.swift */,
 			);
-			path = UseCase;
+			path = Mocks;
 			sourceTree = "<group>";
 		};
-		16D727F123C7516300684881 /* APIGateway */ = {
+		16CDA83C23CF264500DCB54B /* ExpertLeadTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				1660435B23C8D03B0076CB50 /* APIGatewayContract.swift */,
-				1660436423C8DF510076CB50 /* Entity */,
-				16BD33D423CCDD7500C8B8FA /* GatewayURLFactory */,
-				1660436323C8DF180076CB50 /* TinyNetworking */,
-			);
-			path = APIGateway;
-			sourceTree = "<group>";
-		};
-		16D727F923C7520F00684881 /* ExpertLeadTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				16BD33DD23CCED6D00C8B8FA /* GatewayURLFactoryTests.swift */,
-				16D727FC23C7520F00684881 /* Info.plist */,
+				16CDA84923CF29B100DCB54B /* Presentation Layer */,
+				16CA2F0123D073EA00CD1B89 /* Application Logic */,
+				1646828023D0CB9B00E1B971 /* Gateway */,
+				16CDA83F23CF264500DCB54B /* Info.plist */,
 			);
 			path = ExpertLeadTestTests;
 			sourceTree = "<group>";
 		};
-		16DD0D5E23C8CC2A004608B6 /* Recovered References */ = {
+		16CDA84923CF29B100DCB54B /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
-				16D5A0B923C8C9D200B64A29 /* User.swift */,
+				16CDA84A23CF29DB00DCB54B /* Login */,
 			);
-			name = "Recovered References";
+			path = "Presentation Layer";
 			sourceTree = "<group>";
 		};
-		16DD0D5F23C8CC4E004608B6 /* Entity */ = {
+		16CDA84A23CF29DB00DCB54B /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				1660435F23C8DECD0076CB50 /* AuthenticatedUser.swift */,
-				1660435D23C8DEA40076CB50 /* Credentials.swift */,
-				1660436123C8DEF90076CB50 /* DisplayableError.swift */,
+				16CDA84B23CF29E000DCB54B /* Presenter */,
+				16CDA84E23CF344B00DCB54B /* View */,
 			);
-			path = Entity;
+			path = Login;
+			sourceTree = "<group>";
+		};
+		16CDA84B23CF29E000DCB54B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				16CDA83D23CF264500DCB54B /* LoginPresenterTests.swift */,
+				16CDA84C23CF2A0A00DCB54B /* Mocks */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		16CDA84C23CF2A0A00DCB54B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				16CDA84523CF272100DCB54B /* MockLoginView.swift */,
+				16CDA85A23CF4C3D00DCB54B /* MockLoginUseCase.swift */,
+				16CDA84723CF281F00DCB54B /* MockRouter.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		16CDA84E23CF344B00DCB54B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16CDA84F23CF347600DCB54B /* LoginViewTests.swift */,
+				16CDA85123CF3F1800DCB54B /* Mocks */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16CDA85123CF3F1800DCB54B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				16CDA85223CF3F2E00DCB54B /* LoginPresenterMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		16CDA85423CF482800DCB54B /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				1642ABF823D1AFE200498972 /* Entity */,
+				16CDA85523CF484800DCB54B /* Login */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		16CDA85523CF484800DCB54B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				16CDA85623CF485F00DCB54B /* LoginUseCaseContract.swift */,
+				16CDA85823CF487B00DCB54B /* LoginUseCase.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		AA1476DE212AEF1700214093 = {
 			isa = PBXGroup;
 			children = (
-				16CA2EFF23D0520800CD1B89 /* README.md */,
+				1646826F23D09E8200E1B971 /* README.md */,
 				AA1476E9212AEF1700214093 /* ExpertLeadTest */,
-				16D727F923C7520F00684881 /* ExpertLeadTestTests */,
+				16CDA83C23CF264500DCB54B /* ExpertLeadTestTests */,
 				AA1476E8212AEF1700214093 /* Products */,
-				16DD0D5E23C8CC2A004608B6 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,7 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				AA1476E7212AEF1700214093 /* ExpertLeadTest.app */,
-				16D727F823C7520F00684881 /* ExpertLeadTestTests.xctest */,
+				16CDA83B23CF264500DCB54B /* ExpertLeadTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,7 +317,10 @@
 		AA1476E9212AEF1700214093 /* ExpertLeadTest */ = {
 			isa = PBXGroup;
 			children = (
-				AA1476FD212AEF3500214093 /* Module */,
+				AA1476FD212AEF3500214093 /* Presentation Layer */,
+				16CDA85423CF482800DCB54B /* Application Logic */,
+				1646827123D0C0EE00E1B971 /* Gateway */,
+				AA147713212AF36B00214093 /* Storyboard */,
 				AA1476FC212AEF2300214093 /* Other */,
 				AA1476F6212AEF1800214093 /* Info.plist */,
 			);
@@ -248,14 +337,15 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		AA1476FD212AEF3500214093 /* Module */ = {
+		AA1476FD212AEF3500214093 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
-				16BD33D923CCEAFC00C8B8FA /* Presentation */,
-				16BD33DA23CCEB1900C8B8FA /* Logic */,
-				16D727F123C7516300684881 /* APIGateway */,
+				16CDA83523CF0CE300DCB54B /* RouterContract.swift */,
+				AA147714212AF4EB00214093 /* Router.swift */,
+				AA147700212AEF5D00214093 /* Login */,
+				AA1476FF212AEF5000214093 /* Success */,
 			);
-			path = Module;
+			path = "Presentation Layer";
 			sourceTree = "<group>";
 		};
 		AA1476FF212AEF5000214093 /* Success */ = {
@@ -323,22 +413,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		16D727F723C7520F00684881 /* ExpertLeadTestTests */ = {
+		16CDA83A23CF264500DCB54B /* ExpertLeadTestTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16D727FF23C7520F00684881 /* Build configuration list for PBXNativeTarget "ExpertLeadTestTests" */;
+			buildConfigurationList = 16CDA84423CF264500DCB54B /* Build configuration list for PBXNativeTarget "ExpertLeadTestTests" */;
 			buildPhases = (
-				16D727F423C7520F00684881 /* Sources */,
-				16D727F523C7520F00684881 /* Frameworks */,
-				16D727F623C7520F00684881 /* Resources */,
+				16CDA83723CF264500DCB54B /* Sources */,
+				16CDA83823CF264500DCB54B /* Frameworks */,
+				16CDA83923CF264500DCB54B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				16D727FE23C7520F00684881 /* PBXTargetDependency */,
+				16CDA84123CF264500DCB54B /* PBXTargetDependency */,
 			);
 			name = ExpertLeadTestTests;
 			productName = ExpertLeadTestTests;
-			productReference = 16D727F823C7520F00684881 /* ExpertLeadTestTests.xctest */;
+			productReference = 16CDA83B23CF264500DCB54B /* ExpertLeadTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		AA1476E6212AEF1700214093 /* ExpertLeadTest */ = {
@@ -355,7 +445,7 @@
 			);
 			name = ExpertLeadTest;
 			packageProductDependencies = (
-				16D727EF23C748F100684881 /* TinyNetworking */,
+				1642ABEB23D1A5A100498972 /* TinyNetworking */,
 			);
 			productName = ExpertLeadTest;
 			productReference = AA1476E7212AEF1700214093 /* ExpertLeadTest.app */;
@@ -370,7 +460,7 @@
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 0940;
 				TargetAttributes = {
-					16D727F723C7520F00684881 = {
+					16CDA83A23CF264500DCB54B = {
 						CreatedOnToolsVersion = 11.3;
 						TestTargetID = AA1476E6212AEF1700214093;
 					};
@@ -390,20 +480,20 @@
 			);
 			mainGroup = AA1476DE212AEF1700214093;
 			packageReferences = (
-				16D727EE23C748F100684881 /* XCRemoteSwiftPackageReference "tiny-networking" */,
+				1642ABEA23D1A5A100498972 /* XCRemoteSwiftPackageReference "tiny-networking" */,
 			);
 			productRefGroup = AA1476E8212AEF1700214093 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AA1476E6212AEF1700214093 /* ExpertLeadTest */,
-				16D727F723C7520F00684881 /* ExpertLeadTestTests */,
+				16CDA83A23CF264500DCB54B /* ExpertLeadTestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		16D727F623C7520F00684881 /* Resources */ = {
+		16CDA83923CF264500DCB54B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -416,7 +506,7 @@
 			files = (
 				AA1476F5212AEF1800214093 /* LaunchScreen.storyboard in Resources */,
 				AA1476F2212AEF1800214093 /* Assets.xcassets in Resources */,
-				16CA2F0023D0520800CD1B89 /* README.md in Resources */,
+				1646827023D09E8200E1B971 /* README.md in Resources */,
 				AA1476F0212AEF1700214093 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,11 +514,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		16D727F423C7520F00684881 /* Sources */ = {
+		16CDA83723CF264500DCB54B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16BD33DE23CCED6D00C8B8FA /* GatewayURLFactoryTests.swift in Sources */,
+				16CA2F0723D0765000CD1B89 /* MockLoginUseCaseDelegate.swift in Sources */,
+				16CDA84823CF281F00DCB54B /* MockRouter.swift in Sources */,
+				16CDA85B23CF4C3D00DCB54B /* MockLoginUseCase.swift in Sources */,
+				16CDA83E23CF264500DCB54B /* LoginPresenterTests.swift in Sources */,
+				1646827F23D0C5BC00E1B971 /* MockAPIGateway.swift in Sources */,
+				16CDA85023CF347600DCB54B /* LoginViewTests.swift in Sources */,
+				16CA2F0423D0742300CD1B89 /* LoginUseCaseTests.swift in Sources */,
+				16CDA85323CF3F2E00DCB54B /* LoginPresenterMock.swift in Sources */,
+				16CDA84623CF272100DCB54B /* MockLoginView.swift in Sources */,
+				1642ABE823D19A2B00498972 /* APIGatewayURLFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,26 +535,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1646827A23D0C26F00E1B971 /* SuccessfulAuthenticationResponse.swift in Sources */,
 				AA147702212AEFBC00214093 /* LoginPresenter.swift in Sources */,
-				16D5A0B423C8C39500B64A29 /* LoginUseCaseContract.swift in Sources */,
-				1660436823C8DFA80076CB50 /* APIAuthenticationError.swift in Sources */,
-				16D5A0B823C8C48D00B64A29 /* LoginUseCase.swift in Sources */,
-				1660436223C8DEF90076CB50 /* DisplayableError.swift in Sources */,
-				16BD33D623CCDDA100C8B8FA /* GatewayURLFactoryContract.swift in Sources */,
-				16BD33D823CCDDCA00C8B8FA /* GatewayURLFactory.swift in Sources */,
 				AA147712212AF17C00214093 /* SuccessViewController.swift in Sources */,
-				1660436023C8DECD0076CB50 /* AuthenticatedUser.swift in Sources */,
 				AA147715212AF4EB00214093 /* Router.swift in Sources */,
+				1692C60323D1BC7C0076B255 /* AuthenticatedUser.swift in Sources */,
+				1646827423D0C15100E1B971 /* APIGatewayContract.swift in Sources */,
 				AA1476ED212AEF1700214093 /* LoginViewController.swift in Sources */,
-				16D727F323C7519900684881 /* TinyNetworkingAPIGateway.swift in Sources */,
+				1646827923D0C26F00E1B971 /* APIAuthenticationError.swift in Sources */,
 				AA147706212AEFF300214093 /* LoginPresenterContract.swift in Sources */,
-				1660436623C8DF6F0076CB50 /* SuccessfulAuthenticationResponse.swift in Sources */,
+				16CDA85723CF485F00DCB54B /* LoginUseCaseContract.swift in Sources */,
+				16CDA83623CF0CE300DCB54B /* RouterContract.swift in Sources */,
+				1646827B23D0C26F00E1B971 /* Credentials.swift in Sources */,
 				AA14770D212AF13B00214093 /* SuccesssPresenter.swift in Sources */,
-				1660435E23C8DEA40076CB50 /* Credentials.swift in Sources */,
+				1642ABE523D199C700498972 /* APIGatewayURLFactoryContract.swift in Sources */,
+				1642ABFA23D1AFF400498972 /* PresentableError.swift in Sources */,
 				AA1476EB212AEF1700214093 /* AppDelegate.swift in Sources */,
 				AA14770B212AF10900214093 /* SuccessPresenterContract.swift in Sources */,
+				1642ABE623D199C700498972 /* APIGatewayURLFactory.swift in Sources */,
+				1642ABEF23D1A7A300498972 /* TinyNetworkingEndpointFactory.swift in Sources */,
 				AA147710212AF16500214093 /* SuccessViewContract.swift in Sources */,
-				1660435C23C8D03B0076CB50 /* APIGatewayContract.swift in Sources */,
+				1646827D23D0C3C800E1B971 /* TinyNetworkingAPIGateway.swift in Sources */,
+				16CDA85923CF487B00DCB54B /* LoginUseCase.swift in Sources */,
+				1642ABF123D1A8B200498972 /* AuthenticationResponse.swift in Sources */,
 				AA147708212AF01A00214093 /* LoginViewContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,10 +565,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		16D727FE23C7520F00684881 /* PBXTargetDependency */ = {
+		16CDA84123CF264500DCB54B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AA1476E6212AEF1700214093 /* ExpertLeadTest */;
-			targetProxy = 16D727FD23C7520F00684881 /* PBXContainerItemProxy */;
+			targetProxy = 16CDA84023CF264500DCB54B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -490,7 +592,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		16D7280023C7520F00684881 /* Debug */ = {
+		16CDA84223CF264500DCB54B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,7 +614,7 @@
 			};
 			name = Debug;
 		};
-		16D7280123C7520F00684881 /* Release */ = {
+		16CDA84323CF264500DCB54B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -660,7 +762,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.expertlead.ExpertLeadTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -677,18 +779,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.expertlead.ExpertLeadTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16D727FF23C7520F00684881 /* Build configuration list for PBXNativeTarget "ExpertLeadTestTests" */ = {
+		16CDA84423CF264500DCB54B /* Build configuration list for PBXNativeTarget "ExpertLeadTestTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16D7280023C7520F00684881 /* Debug */,
-				16D7280123C7520F00684881 /* Release */,
+				16CDA84223CF264500DCB54B /* Debug */,
+				16CDA84323CF264500DCB54B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -714,20 +816,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		16D727EE23C748F100684881 /* XCRemoteSwiftPackageReference "tiny-networking" */ = {
+		1642ABEA23D1A5A100498972 /* XCRemoteSwiftPackageReference "tiny-networking" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/objcio/tiny-networking.git";
 			requirement = {
-				kind = exactVersion;
-				version = 0.3.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		16D727EF23C748F100684881 /* TinyNetworking */ = {
+		1642ABEB23D1A5A100498972 /* TinyNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 16D727EE23C748F100684881 /* XCRemoteSwiftPackageReference "tiny-networking" */;
+			package = 1642ABEA23D1A5A100498972 /* XCRemoteSwiftPackageReference "tiny-networking" */;
 			productName = TinyNetworking;
 		};
 /* End XCSwiftPackageProductDependency section */
